@@ -1,0 +1,199 @@
+title: Lead
+sections:
+  main:
+    display: Main
+    fields:
+      -
+        handle: title
+        field:
+          type: text
+          required: true
+          width: 66
+          validate:
+            - required
+      -
+        handle: status
+        field:
+          options:
+            New: null
+            'Follow Up': null
+            Prospect: null
+            Negotiation: null
+            Won: null
+            Lost: null
+          multiple: false
+          max_items: 1
+          clearable: true
+          searchable: true
+          taggable: false
+          push_tags: false
+          cast_booleans: false
+          display: Status
+          type: select
+          icon: select
+          listable: hidden
+          instructions_position: above
+          read_only: false
+          width: 33
+      -
+        handle: description
+        field:
+          antlers: false
+          display: Description
+          type: textarea
+          icon: textarea
+          listable: hidden
+          instructions_position: above
+          read_only: false
+      -
+        handle: lead_value
+        field:
+          input_type: number
+          antlers: false
+          display: 'Lead Value'
+          type: text
+          icon: text
+          width: 50
+          listable: hidden
+          instructions_position: above
+          read_only: false
+      -
+        handle: source
+        field:
+          options:
+            Email: null
+            Facebook: null
+            LinkedIn: null
+            Twitter: null
+            Other: null
+          multiple: false
+          max_items: 1
+          clearable: true
+          searchable: true
+          taggable: false
+          push_tags: false
+          cast_booleans: false
+          default: Other
+          display: Source
+          type: select
+          icon: select
+          width: 50
+          listable: hidden
+          instructions_position: above
+          read_only: false
+      -
+        handle: expected_close_date
+        field:
+          mode: single
+          earliest_date: '2022-06-26'
+          latest_date: '2022-06-26'
+          time_enabled: false
+          time_seconds_enabled: false
+          full_width: false
+          inline: false
+          columns: 1
+          rows: 1
+          display: 'Expected Close Date'
+          type: date
+          icon: date
+          width: 50
+          listable: hidden
+          instructions_position: above
+          read_only: false
+      -
+        handle: type
+        field:
+          options:
+            'New Business': null
+            'Existing Business': null
+          multiple: false
+          max_items: 1
+          clearable: true
+          searchable: true
+          taggable: false
+          push_tags: false
+          cast_booleans: false
+          display: Type
+          type: select
+          icon: select
+          width: 50
+          listable: hidden
+          instructions_position: above
+          read_only: false
+  sidebar:
+    display: Sidebar
+    fields:
+      -
+        handle: sales_owner
+        field:
+          type: users
+          display: 'Sales Owner'
+          default: current
+          localizable: true
+          max_items: 1
+          instructions_position: above
+          listable: hidden
+          read_only: false
+          mode: select
+      -
+        handle: slug
+        field:
+          type: slug
+          localizable: true
+      -
+        handle: template
+        field:
+          type: template
+          display: Template
+          localizable: true
+  contact_person:
+    display: 'Contact Person'
+    fields:
+      -
+        handle: name
+        field:
+          input_type: text
+          antlers: false
+          display: Name
+          type: text
+          icon: text
+          width: 50
+          listable: hidden
+          instructions_position: above
+          read_only: false
+      -
+        handle: email
+        field:
+          input_type: email
+          antlers: false
+          display: Email
+          type: text
+          icon: text
+          width: 50
+          listable: hidden
+          instructions_position: above
+          read_only: false
+      -
+        handle: contact_numbers
+        field:
+          input_type: tel
+          antlers: false
+          display: 'Contact Numbers'
+          type: text
+          icon: text
+          width: 50
+          listable: hidden
+          instructions_position: above
+          read_only: false
+      -
+        handle: organization
+        field:
+          input_type: text
+          antlers: false
+          display: Organization
+          type: text
+          icon: text
+          width: 50
+          listable: hidden
+          instructions_position: above
+          read_only: false
